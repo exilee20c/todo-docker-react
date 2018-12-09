@@ -2,8 +2,6 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import Component from 'src/'
-
 describe('Component', () => {
   let node
 
@@ -16,7 +14,7 @@ describe('Component', () => {
   })
 
   it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
+    render(<div>Welcome to React components</div>, node, () => {
       expect(node.innerHTML).toContain('Welcome to React components')
     })
   })

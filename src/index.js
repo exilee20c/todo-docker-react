@@ -1,32 +1,24 @@
 import React, { Component } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { far } from "@fortawesome/free-regular-svg-icons";
 import {
-  far,
-  faTrashAlt,
-  faStickyNote,
-  faPlusSquare,
-  faSquare,
-  faCheckSquare
-} from "@fortawesome/free-regular-svg-icons";
-
-import "./index.css";
-library.add(
-  far,
   faStickyNote,
   faPlusSquare,
   faSquare,
   faCheckSquare,
   faTrashAlt
-);
+} from "@fortawesome/free-solid-svg-icons";
 
-const load = () => {
+import "./index.css";
+
+const load = ({ storage }) => {
   if (
     window.localStorage &&
     typeof window.localStorage.getItem === "function"
   ) {
     try {
-      return JSON.parse(window.localStorage.getItem(this.props.storage || "_exl_todo"));
+      return JSON.parse(window.localStorage.getItem(storage || "_exl_todo"));
     } catch (e) {
       return undefined;
     }
@@ -35,7 +27,21 @@ const load = () => {
 };
 
 export class MemoDocker extends Component {
-  state = load() || { open: true, memo: "", memoes: [], m_l: 0 };
+  constructor(props) {
+    super(props);
+
+    !props.noFortAwesome &&
+      library.add(
+        far,
+        faStickyNote,
+        faPlusSquare,
+        faSquare,
+        faCheckSquare,
+        faTrashAlt
+      );
+
+    this.state = load(props) || { open: false, memo: "", memoes: [], m_l: 0 };
+  }
 
   memoRef = React.createRef();
 
@@ -97,24 +103,29 @@ export class MemoDocker extends Component {
       window.localStorage &&
       typeof window.localStorage.setItem === "function"
     ) {
-      window.localStorage.setItem(this.props.storage || "_exl_todo", JSON.stringify(this.state));
+      window.localStorage.setItem(
+        this.props.storage || "_exl_todo",
+        JSON.stringify(this.state)
+      );
     }
   };
 
   render() {
-    const { title: t } = this.props;
+    const { title: t, noFortAwesome } = this.props;
     const { open, memo, memoes } = this.state;
 
     return (
       <div className="exl-todo-docker-wrap">
         <button className="pick" onClick={this.openByClick}>
-          <FontAwesomeIcon icon={["far", "sticky-note"]} />
+          {!noFortAwesome && <FontAwesomeIcon icon={["far", "sticky-note"]} />}
           <span>{t || "TODO DOCKER"}</span>
         </button>
 
         <div className={`pane${open ? " open" : ""}`}>
           <button onClick={this.addMemo}>
-            <FontAwesomeIcon icon={["far", "plus-square"]} />
+            {!noFortAwesome && (
+              <FontAwesomeIcon icon={["far", "plus-square"]} />
+            )}
           </button>
           <input
             ref={this.memoRef}
@@ -128,16 +139,18 @@ export class MemoDocker extends Component {
             {memoes.map(({ g, v, d }) => (
               <li key={g}>
                 <button onClick={() => this.doneMemo(g, !d)}>
-                  <FontAwesomeIcon
-                    icon={["far", d ? "check-square" : "square"]}
-                  />
+                  {!noFortAwesome && (
+                    <FontAwesomeIcon
+                      icon={["far", d ? "check-square" : "square"]}
+                    />
+                  )}
                   <span>{v}</span>
                 </button>
               </li>
             ))}
           </ul>
           <button className="clean" onClick={this.cleanMemo}>
-            <FontAwesomeIcon icon={["far", "trash-alt"]} />
+            {!noFortAwesome && <FontAwesomeIcon icon={["far", "trash-alt"]} />}
             <span>CLEAN DONE</span>
           </button>
         </div>
