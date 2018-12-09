@@ -1,16 +1,10 @@
 # todo-docker-react
 
-[![Travis][build-badge]][build]
+[![Build Status](https://travis-ci.org/exilee20c/todo-docker-react.svg?branch=master)](https://travis-ci.org/exilee20c/todo-docker-react)
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![Coverage Status](https://coveralls.io/repos/github/exilee20c/todo-docker-react/badge.svg?branch=master)](https://coveralls.io/github/exilee20c/todo-docker-react?branch=master)
 
 Describe todo-docker-react here.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
