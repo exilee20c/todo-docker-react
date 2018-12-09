@@ -1,13 +1,14 @@
 import React, {Component} from 'react'
 import {render} from 'react-dom'
 
-import Example from '../../src'
+import Docker from '../../src'
 
 class Demo extends Component {
   render() {
     return <div>
-      <h1>todo-docker-react Demo</h1>
-      <Example/>
+      <h1>TODO DOCKER REACT rules!</h1>
+
+      <Docker storage="_exl_todo_storage" title="TODO DOCKER REACT"/>
     </div>
   }
 }

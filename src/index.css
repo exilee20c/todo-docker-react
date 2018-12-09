@@ -1,0 +1,110 @@
+div.exl-todo-docker-wrap {
+  position: fixed;
+  bottom: 0;
+  right: 24px;
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+div.exl-todo-docker-wrap ul {
+  margin: 0;
+  padding: 0;
+}
+
+div.exl-todo-docker-wrap button.pick {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  padding: 10px;
+  margin: 0;
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+}
+
+div.exl-todo-docker-wrap button.pick svg {
+  vertical-align: middle;
+  font-size: 24px;
+}
+
+div.exl-todo-docker-wrap button.pick span {
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 16px;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+div.exl-todo-docker-wrap div.pane {
+  width: 320px;
+  height: 400px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: -400px;
+  transition: margin-bottom 0.7s ease-in-out;
+  font-size: 16px;
+}
+
+div.exl-todo-docker-wrap div.pane.open {
+  margin-bottom: 0px;
+}
+
+div.exl-todo-docker-wrap div.pane input {
+  vertical-align: middle;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: inherit;
+  background-color: transparent;
+  color: #ffffff;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  width: calc(100% - 24px);
+  margin-left: 10px;
+}
+
+div.exl-todo-docker-wrap div.pane button {
+  vertical-align: middle;
+  font-size: inherit;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+}
+
+div.exl-todo-docker-wrap div.pane ul.memoes {
+  font-size: inherit;
+  font-family: "Ubuntu Mono", monospace;
+}
+div.exl-todo-docker-wrap div.pane ul.memoes li {
+  margin-top: 10px;
+}
+
+div.exl-todo-docker-wrap div.pane ul.memoes li button span {
+  margin-left: 10px;
+}
+
+div.exl-todo-docker-wrap div.pane button.clean {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  background-color: inherit;
+  color: inherit;
+  margin-top: 10px;
+}
+
+div.exl-todo-docker-wrap div.pane button.clean svg {
+  vertical-align: middle;
+}
+
+div.exl-todo-docker-wrap div.pane button.clean span {
+  margin-left: 10px;
+  vertical-align: middle;
+  font-size: 16px;
+  font-family: "Ubuntu Mono", monospace;
+}
