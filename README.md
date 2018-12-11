@@ -9,7 +9,7 @@
 
 My GitHub Page also use todo-docker-react.
 
-![My GitHub Page](https://raw.githubusercontent.com/exilee20c/todo-docker-react/master/public/todo-docker-react.png)]
+![My GitHub Page](https://raw.githubusercontent.com/exilee20c/todo-docker-react/master/public/todo-docker-react.png)
 
 import as any other react based components.
 
