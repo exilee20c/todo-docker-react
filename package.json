@@ -1,7 +1,7 @@
 {
   "name": "todo-docker-react",
-  "version": "1.0.1",
-  "description": "todo-docker-react React component",
+  "version": "1.0.2",
+  "description": "todo-docker-react is docked ui what your todo items memorized via localStorage",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -35,11 +35,13 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
-  "author": "",
-  "homepage": "",
+  "author": "exilee20c",
+  "homepage": "https://github.com/exilee20c/todo-docker-react",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/exilee20c/todo-docker-react",
   "keywords": [
-    "react-component"
+    "todo",
+    "localStorage",
+    "docked-ui"
   ]
 }
