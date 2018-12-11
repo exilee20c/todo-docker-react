@@ -1,6 +1,6 @@
 {
   "name": "todo-docker-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "todo-docker-react React component",
   "main": "lib/index.js",
   "module": "es/index.js",
